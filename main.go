@@ -9,6 +9,7 @@ import (
 
 func main() {
 	app := iris.New()
+
 	app.Logger().SetLevel("debug")
 
 	// Load the template files.
