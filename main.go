@@ -13,7 +13,7 @@ func main() {
 	app.Logger().SetLevel("debug")
 
 	// Load the template files.
-	app.RegisterView(iris.HTML("./web/views", ".html"))
+	app.RegisterView(iris.HTML("./web/views", ".html").Layout("shared/_layout.html"))
 
 	// Serve our controllers.
 	mvc.New(app.Party("/home")).Handle(new(controllers.HomeController))
